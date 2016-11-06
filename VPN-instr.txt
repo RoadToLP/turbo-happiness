@@ -69,4 +69,15 @@ R1(config-ext-nacl)#deny ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255 //Ста
 R1(config-ext-nacl)#permit ip 192.168.1.0 0.0.0.255 any //А остальной трафик пусть NATится.
 То же самое на R2.
 Поздравляем! Мы настроили VPN! Пинг идёт.
+-----Для linux-----
+sudo su
+apt-get install libreadline-dev libssl-dev libncurses5-dev zlib1g-dev
+git clone github.com/SoftEtherVPN/SoftEtherVPN.git
+cd SoftEtherVPN\
+./configure
+make
+checkinstall
+Сервер поднят
+-----Для Windows-----
+Ссылка на ресурс - http://proremontpk.ru/systems/windows7/vpn-server-na-windows-7.html
 На этом всё. Спасибо за прочтение.
